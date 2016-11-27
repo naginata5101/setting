@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="network_state" enabled="false">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+  </event>
+  <event type="connectivity" enabled="true">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="type" type="strings">
+      <item>wifi</item>
+    </param>
+  </event>
+  <action type="wait" enabled="true">
+    <param name="time" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">10000</param>
+      </expression>
+    </param>
+    <param name="while" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="maxChecks" type="int">0</param>
+    <param name="wakeLock" type="boolean">false</param>
+  </action>
+  <action type="break" enabled="true">
+    <condition type="not">
+      <param name="expression" type="expression">
+        <expression type="network_is_connected">
+          <param name="type" type="strings">
+            <item>wifi</item>
+          </param>
+        </expression>
+      </param>
+    </condition>
+  </action>
+  <action type="screen_brightness" enabled="true">
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">3</param>
+      </expression>
+    </param>
+  </action>
+</command>

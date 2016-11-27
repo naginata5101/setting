@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="string">
+        <param name="value" type="string">https://maker.ifttt.com/trigger/line_mom/with/key/nrpTXx4-kjZvG_UrhCLaX8gxcP1lOZ2HjQBXTucz9Te?value1=今日は帰りません。&amp;value4=http://2.bp.blogspot.com/--nwlAzP2WDI/VEETc5g56nI/AAAAAAAAofs/AVHOd8BtZhg/s800/neru_man.png</param>
+      </expression>
+    </param>
+  </action>
+</command>

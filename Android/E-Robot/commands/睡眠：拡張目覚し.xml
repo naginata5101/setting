@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="clock_alarm_done" enabled="true">
+    <condition type="variable">
+      <param name="name" type="expression">
+        <expression type="string">
+          <param name="value" type="string">alarm_append</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <action type="open_file" enabled="true">
+    <param name="file" type="expression">
+      <expression type="file">
+        <param name="value" type="string">/storage/emulated/0/Download/nhk-news.mp3</param>
+      </expression>
+    </param>
+    <param name="package" type="string">com.google.android.music</param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">alarm_append</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">false</param>
+      </expression>
+    </param>
+  </action>
+</command>

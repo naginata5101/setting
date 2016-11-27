@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="dialog" enabled="true">
+    <param name="title" type="expression">
+      <expression type="string">
+        <param name="value" type="string">test</param>
+      </expression>
+    </param>
+    <param name="message" type="expression">
+      <expression type="shell_command_result">
+        <param name="su" type="boolean">false</param>
+        <param name="command" type="expression">
+          <expression type="string">
+            <param name="value" type="string">sed -n -e '/mp3/p' /storage/emulated/0/Download/nhkradionews.xml | sed -n -e '1p' | sed -e 's/.*url="\(.*\)" length=.*/\1/'</param>
+          </expression>
+        </param>
+      </expression>
+    </param>
+  </action>
+  <action type="download" enabled="false">
+    <param name="url" type="expression">
+      <expression type="concatenation">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="null" />
+          </item>
+          <item type="expression">
+            <expression type="element_at">
+              <param name="expression" type="expression">
+                <expression type="match">
+                  <param name="text" type="expression">
+                    <expression type="string">
+                      <param name="value" type="string">http://www9.nhk.or.jp/r-news/podcast/mp3/20161127070003_10059_1_1_2.mp3</param>
+                    </expression>
+                  </param>
+                  <param name="pattern" type="string">http://www9.nhk.or.jp/r-news/podcast/mp3/(\d+)_(\d+)_(\d+)_(\d+)_(\d+).mp3</param>
+                </expression>
+              </param>
+              <param name="position" type="expression">
+                <expression type="integer">
+                  <param name="value" type="int">1</param>
+                </expression>
+              </param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="null" />
+          </item>
+        </param>
+      </expression>
+    </param>
+    <param name="file" type="string">/storage/emulated/0/Download/news.mp3</param>
+  </action>
+</command>

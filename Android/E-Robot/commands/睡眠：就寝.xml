@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <command>
-  <event type="screen_brightness" enabled="true">
+  <event type="screen_brightness" enabled="false">
     <condition type="lessThan">
       <param name="equals" type="boolean">true</param>
       <param name="expression1" type="expression">
@@ -8,7 +8,7 @@
       </param>
       <param name="expression2" type="expression">
         <expression type="integer">
-          <param name="value" type="int">0</param>
+          <param name="value" type="int">2</param>
         </expression>
       </param>
     </condition>
@@ -20,11 +20,29 @@
     <param name="wait_for_finish" type="boolean">false</param>
   </action>
   <action type="set_variable" enabled="true">
-    <param name="name" type="string">inBed</param>
+    <param name="name" type="string">in_bed</param>
     <param name="value" type="expression">
       <expression type="boolean">
         <param name="value" type="boolean">true</param>
       </expression>
     </param>
+  </action>
+  <action type="screen_brightness" enabled="false">
+    <param name="percent" type="expression">
+      <expression type="double">
+        <param name="value" type="double">0.0</param>
+      </expression>
+    </param>
+  </action>
+  <action type="screen_filter" enabled="true">
+    <param name="color" type="int">1073741824</param>
+    <param name="button_brightness" type="string">-1</param>
+    <param name="disable_touch" type="boolean">false</param>
+  </action>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">睡眠：スムーズ設定</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">true</param>
   </action>
 </command>

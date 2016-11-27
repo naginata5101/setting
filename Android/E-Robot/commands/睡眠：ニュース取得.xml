@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="string">
+        <param name="value" type="string">http://www.nhk.or.jp/r-news/podcast/nhkradionews.xml</param>
+      </expression>
+    </param>
+    <param name="file" type="string">/storage/emulated/0/Download/nhkradionews.xml</param>
+  </action>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="shell_command_result">
+        <param name="su" type="boolean">false</param>
+        <param name="command" type="expression">
+          <expression type="string">
+            <param name="value" type="string">sed -n -e '/mp3/p' /storage/emulated/0/Download/nhkradionews.xml | sed -n -e '1p' | sed -e 's/.*url="\(.*\)" length=.*/\1/'</param>
+          </expression>
+        </param>
+      </expression>
+    </param>
+    <param name="file" type="string">/storage/emulated/0/Download/nhk-news.mp3</param>
+  </action>
+</command>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="string">
+        <param name="value" type="string">https://maker.ifttt.com/trigger/line_mom/with/key/nrpTXx4-kjZvG_UrhCLaX8gxcP1lOZ2HjQBXTucz9Te?value1=食事不要です。&amp;value4=http://2.bp.blogspot.com/-LCCuMkBq6A4/V-SzHXt7JyI/AAAAAAAA-EA/CeQ7BSR8Vb8IDLyTvtuMeJKWq4-D9KuYACLcB/s800/syokuji_man.png</param>
+      </expression>
+    </param>
+  </action>
+</command>

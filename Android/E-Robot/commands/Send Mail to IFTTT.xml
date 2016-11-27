@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command enabled="false">
+  <action type="send_email" enabled="true">
+    <param name="account" type="emailaccount" email="senngokujidai4434@yahoo.com" emailLogin="false" password="151D9B900E645A273D8BD881701F55B114A683C2F5D2F36C" inProtocol="smtps" inHost="smtp.mail.yahoo.com" inPort="465" />
+    <param name="address" type="expression">
+      <expression type="string">
+        <param name="value" type="string">trigger@recipe.ifttt.com</param>
+      </expression>
+    </param>
+    <param name="subject" type="expression">
+      <expression type="variable">
+        <param name="name" type="expression">
+          <expression type="string">
+            <param name="value" type="string">mailSubject</param>
+          </expression>
+        </param>
+      </expression>
+    </param>
+    <param name="message" type="expression">
+      <expression type="variable">
+        <param name="name" type="expression">
+          <expression type="string">
+            <param name="value" type="string">mailMessage</param>
+          </expression>
+        </param>
+      </expression>
+    </param>
+    <param name="file" type="expression">
+      <expression type="variable">
+        <param name="name" type="expression">
+          <expression type="string">
+            <param name="value" type="string">mailFilepath</param>
+          </expression>
+        </param>
+      </expression>
+    </param>
+  </action>
+</command>

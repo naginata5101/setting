@@ -10,7 +10,7 @@
     </param>
   </event>
   <action type="execute_robot_command" enabled="true">
-    <param name="command" type="string">モード：視聴</param>
+    <param name="command" type="string">モード：大声</param>
     <param name="confirmation" type="boolean">false</param>
     <param name="enableExecuteItself" type="boolean">false</param>
     <param name="wait_for_finish" type="boolean">false</param>

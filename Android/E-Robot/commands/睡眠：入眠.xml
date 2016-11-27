@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="power_connected" enabled="true">
+    <param name="when" type="strings">
+      <item>ac</item>
+    </param>
+    <condition type="variable">
+      <param name="name" type="expression">
+        <expression type="string">
+          <param name="value" type="string">in_bed</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <action type="screen_off" enabled="true" />
+  <action type="wait" enabled="true">
+    <param name="time" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">3000</param>
+      </expression>
+    </param>
+    <param name="while" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="maxChecks" type="int">0</param>
+    <param name="wakeLock" type="boolean">false</param>
+  </action>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：通常</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+  <action type="screen_brightness" enabled="false">
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">3</param>
+      </expression>
+    </param>
+  </action>
+  <action type="hide_screen_filter" enabled="true" />
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">in_bed</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">false</param>
+      </expression>
+    </param>
+  </action>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">睡眠：ニュース取得</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+</command>

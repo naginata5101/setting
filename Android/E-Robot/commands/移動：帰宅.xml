@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="network_state" enabled="false">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="ssid" type="string">Buffalo_WHR-G54S</param>
+  </event>
+  <event type="connectivity" enabled="true">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="type" type="strings">
+      <item>wifi</item>
+    </param>
+    <condition type="wifi_has_configured_network">
+      <param name="ssid" type="string">Buffalo_WHR-G54S</param>
+    </condition>
+  </event>
+  <action type="wait" enabled="true">
+    <param name="time" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">10000</param>
+      </expression>
+    </param>
+    <param name="while" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="maxChecks" type="int">0</param>
+    <param name="wakeLock" type="boolean">false</param>
+  </action>
+  <action type="break" enabled="true">
+    <condition type="not">
+      <param name="expression" type="expression">
+        <expression type="is_wifi_network_visible">
+          <param name="ssid" type="string">Buffalo_WHR-G54S</param>
+        </expression>
+      </param>
+    </condition>
+  </action>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：通常</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">inBed</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">false</param>
+      </expression>
+    </param>
+  </action>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">移動：屋内</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+</command>

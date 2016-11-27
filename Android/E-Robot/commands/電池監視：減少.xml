@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <command notification="false" history="false">
-  <event type="battery_charged" enabled="true">
-    <param name="percent" type="int">100</param>
+  <event type="battery_drains" enabled="true">
+    <param name="percent" type="int">20</param>
   </event>
   <action type="notification" enabled="true">
     <param name="id" type="int">-1</param>

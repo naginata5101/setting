@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">IFTTT_timer</param>
+    <param name="value" type="expression">
+      <expression type="time_formatted">
+        <param name="timestamp" type="expression">
+          <expression type="null" />
+        </param>
+        <param name="pattern" type="string">yyyy/MM/dd ||| HH:mm:ss</param>
+        <param name="timezone" type="string">Asia/Tokyo</param>
+      </expression>
+    </param>
+  </action>
+</command>

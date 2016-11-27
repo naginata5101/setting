@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="notification_created" enabled="false">
+    <param name="package" type="string">jp.naver.line.android</param>
+    <param name="ticker" type="string"></param>
+    <param name="hasTicker" type="boolean">false</param>
+    <condition type="variable">
+      <param name="name" type="expression">
+        <expression type="string">
+          <param name="value" type="string">check_LINE</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <event type="notification_posted" enabled="true">
+    <param name="package" type="string">jp.naver.line.android</param>
+    <param name="ticker" type="string"></param>
+    <param name="hasTicker" type="boolean">true</param>
+    <condition type="variable">
+      <param name="name" type="expression">
+        <expression type="string">
+          <param name="value" type="string">check_LINE</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <action type="block" enabled="true">
+    <param name="actions" type="list">
+      <item type="action">
+        <action type="play_default_sound" enabled="true">
+          <param name="type" type="string">2</param>
+        </action>
+      </item>
+      <item type="action">
+        <action type="vibrate" enabled="true">
+          <param name="pattern" type="string">0 250 150 150</param>
+        </action>
+      </item>
+    </param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">check_LINE</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">false</param>
+      </expression>
+    </param>
+  </action>
+  <action type="wait" enabled="true">
+    <param name="time" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">120000</param>
+      </expression>
+    </param>
+    <param name="while" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="maxChecks" type="int">0</param>
+    <param name="wakeLock" type="boolean">false</param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">check_LINE</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">true</param>
+      </expression>
+    </param>
+  </action>
+</command>

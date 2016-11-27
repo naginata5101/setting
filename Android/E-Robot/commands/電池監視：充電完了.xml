@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command notification="false" history="false">
+  <event type="battery_charged" enabled="true">
+    <param name="percent" type="int">100</param>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">時間記録 for ITFFF</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">true</param>
+  </action>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="concatenation">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string">https://maker.ifttt.com/trigger/battery/with/key/nrpTXx4-kjZvG_UrhCLaX8gxcP1lOZ2HjQBXTucz9Te?value1=</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="replace">
+              <param name="text" type="expression">
+                <expression type="variable">
+                  <param name="name" type="expression">
+                    <expression type="string">
+                      <param name="value" type="string">IFTTT_timer</param>
+                    </expression>
+                  </param>
+                </expression>
+              </param>
+              <param name="pattern" type="string">\ </param>
+              <param name="replacement" type="expression">
+                <expression type="string">
+                  <param name="value" type="string">%20</param>
+                </expression>
+              </param>
+              <param name="regexp" type="boolean">true</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string">&amp;value2=FIN&amp;value3=</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="battery_percent" />
+          </item>
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string">%25</param>
+            </expression>
+          </item>
+        </param>
+      </expression>
+    </param>
+  </action>
+  <action type="notification" enabled="true">
+    <param name="id" type="int">-1</param>
+    <param name="title" type="expression">
+      <expression type="string">
+        <param name="value" type="string">Battery Warning</param>
+      </expression>
+    </param>
+    <param name="text" type="expression">
+      <expression type="concatenation">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string"> Finish charging</param>
+            </expression>
+          </item>
+        </param>
+      </expression>
+    </param>
+    <param name="ticker" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="led_color" type="int">-256</param>
+    <param name="led_on" type="int">0</param>
+    <param name="led_off" type="int">0</param>
+    <param name="use" type="strings">
+      <item>light</item>
+      <item>sound</item>
+      <item>vibrate</item>
+    </param>
+    <param name="flags" type="strings" />
+    <param name="priority" type="string">default</param>
+  </action>
+  <action type="com.pushbullet.android.tasker.action.EditActivity" enabled="false">
+    <param name="ext_blurb" type="string">Push a note titled "Battery Warning" with the message "Finis</param>
+    <param name="ext_bundle" type="bundle">
+      <item name="com.pushbullet.android.tasker.TITLE" type="string">Battery Warning</item>
+      <item name="net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS" type="string">com.pushbullet.android.tasker.TITLE com.pushbullet.android.tasker.BODY</item>
+      <item name="com.pushbullet.android.tasker.VERSION_CODE" type="int">1</item>
+      <item name="com.pushbullet.android.tasker.BODY" type="string">Finish charging.</item>
+      <item name="com.pushbullet.android.tasker.ACCOUNT_NAME" type="string">naginata5101@gmail.com</item>
+      <item name="com.pushbullet.android.tasker.PUSH_TYPE" type="string">note</item>
+      <item name="com.pushbullet.android.tasker.TARGET_IDEN" type="string">all-of-my-devices</item>
+    </param>
+  </action>
+</command>

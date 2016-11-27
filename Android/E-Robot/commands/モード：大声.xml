@@ -6,7 +6,7 @@
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">0</param>
+        <param name="value" type="int">25</param>
       </expression>
     </param>
   </action>
@@ -16,7 +16,7 @@
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">0</param>
+        <param name="value" type="int">20</param>
       </expression>
     </param>
   </action>
@@ -26,12 +26,16 @@
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">0</param>
+        <param name="value" type="int">35</param>
       </expression>
     </param>
   </action>
-  <action type="mute" enabled="false">
-    <param name="vibration" type="boolean">true</param>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">audio_mode</param>
+    <param name="value" type="expression">
+      <expression type="string">
+        <param name="value" type="string">loud</param>
+      </expression>
+    </param>
   </action>
-  <action type="media_playback_stop" enabled="true" />
 </command>

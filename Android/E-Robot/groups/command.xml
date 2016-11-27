@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<groups>
+  <group id="1" name="audio">
+    <value>睡眠：拡張目覚し</value>
+    <value>移動：帰宅</value>
+    <value>イヤホン：切断</value>
+    <value>睡眠：入眠</value>
+    <value>楽曲：再生</value>
+    <value>イヤホン：接続</value>
+    <value>睡眠：就寝</value>
+    <value>移動：外出</value>
+  </group>
+  <group id="2" name="audio mode">
+    <value>モード：大声</value>
+    <value>モード：通常</value>
+    <value>モード：鎮静</value>
+    <value>モード：沈黙</value>
+  </group>
+  <group id="5" name="battery">
+    <value>電池監視：減少</value>
+    <value>電池監視：充電開始</value>
+    <value>電池監視：充電完了</value>
+  </group>
+  <group id="4" name="brightness">
+    <value>睡眠：入眠</value>
+    <value>移動：屋内</value>
+    <value>睡眠：就寝</value>
+    <value>移動：外出</value>
+  </group>
+  <group id="6" name="contact">
+    <value>LINE 連絡：外泊</value>
+    <value>LINE 連絡：帰宅</value>
+    <value>LINE 連絡：外食</value>
+    <value>LINE 通知：再開</value>
+    <value>LINE 通知：抑制</value>
+  </group>
+  <group id="3" name="life log">
+    <value>移動：WiFi 変更</value>
+    <value>電池監視：充電完了</value>
+    <value>Send Mail to IFTTT</value>
+    <value>電池監視：充電開始</value>
+    <value>時間記録 for ITFFF</value>
+  </group>
+  <group id="0" name="notifications">
+    <value>電池監視：減少</value>
+    <value>電池監視：充電完了</value>
+    <value>LINE 通知：再開</value>
+    <value>LINE 通知：抑制</value>
+  </group>
+  <group id="7" name="sleep">
+    <value>睡眠：入眠</value>
+    <value>睡眠：ニュース取得</value>
+    <value>睡眠：拡張目覚し</value>
+    <value>睡眠：スムーズ設定</value>
+    <value>睡眠：就寝</value>
+    <value>睡眠：スムーズ時間設定</value>
+  </group>
+</groups>

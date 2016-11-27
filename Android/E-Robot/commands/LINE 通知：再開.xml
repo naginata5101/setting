@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="application_received_focus" enabled="true">
+    <param name="package" type="string">jp.naver.line.android</param>
+    <condition type="not">
+      <param name="expression" type="expression">
+        <expression type="has_notification">
+          <param name="package" type="string">jp.naver.line.android</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">check_LINE</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">true</param>
+      </expression>
+    </param>
+  </action>
+</command>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="screen_on" enabled="true" />
+  <action type="vibrate" enabled="true">
+    <param name="pattern" type="string">0 150 150 250</param>
+  </action>
+</command>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="connectivity" enabled="true">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="type" type="strings">
+      <item>wifi</item>
+    </param>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">時間記録 for ITFFF</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">true</param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">connected_ssid</param>
+    <param name="value" type="expression">
+      <expression type="wifi_ssid" />
+    </param>
+  </action>
+  <action type="wait" enabled="true">
+    <param name="time" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">30000</param>
+      </expression>
+    </param>
+    <param name="while" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="maxChecks" type="int">0</param>
+    <param name="wakeLock" type="boolean">false</param>
+  </action>
+  <action type="download" enabled="true">
+    <param name="url" type="expression">
+      <expression type="concatenation">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string">https://maker.ifttt.com/trigger/wifi/with/key/nrpTXx4-kjZvG_UrhCLaX8gxcP1lOZ2HjQBXTucz9Te?value1=</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="replace">
+              <param name="text" type="expression">
+                <expression type="variable">
+                  <param name="name" type="expression">
+                    <expression type="string">
+                      <param name="value" type="string">IFTTT_timer</param>
+                    </expression>
+                  </param>
+                </expression>
+              </param>
+              <param name="pattern" type="string">\ </param>
+              <param name="replacement" type="expression">
+                <expression type="string">
+                  <param name="value" type="string">%20</param>
+                </expression>
+              </param>
+              <param name="regexp" type="boolean">true</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string">&amp;value2=</param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="wifi_ssid" />
+          </item>
+        </param>
+      </expression>
+    </param>
+    <condition type="equals">
+      <param name="expression1" type="expression">
+        <expression type="variable">
+          <param name="name" type="expression">
+            <expression type="string">
+              <param name="value" type="string">connected_ssid</param>
+            </expression>
+          </param>
+        </expression>
+      </param>
+      <param name="expression2" type="expression">
+        <expression type="wifi_ssid" />
+      </param>
+    </condition>
+  </action>
+</command>

@@ -1,12 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <command>
+  <action type="break" enabled="true">
+    <condition type="is_wired_headset_on">
+      <param name="value" type="boolean">true</param>
+    </condition>
+  </action>
   <action type="volume" enabled="true">
     <param name="stream" type="strings">
       <item>notification</item>
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">45</param>
+        <param name="value" type="int">0</param>
       </expression>
     </param>
   </action>
@@ -16,7 +21,7 @@
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">35</param>
+        <param name="value" type="int">0</param>
       </expression>
     </param>
   </action>
@@ -26,7 +31,19 @@
     </param>
     <param name="percent" type="expression">
       <expression type="integer">
-        <param name="value" type="int">55</param>
+        <param name="value" type="int">30</param>
+      </expression>
+    </param>
+  </action>
+  <action type="mute" enabled="false">
+    <param name="vibration" type="boolean">true</param>
+  </action>
+  <action type="media_playback_pause" enabled="true" />
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">audio_mode</param>
+    <param name="value" type="expression">
+      <expression type="string">
+        <param name="value" type="string">silent</param>
       </expression>
     </param>
   </action>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">alarm_minute</param>
+    <param name="value" type="expression">
+      <expression type="add">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="variable">
+              <param name="name" type="expression">
+                <expression type="string">
+                  <param name="value" type="string">alarm_minute</param>
+                </expression>
+              </param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="integer">
+              <param name="value" type="int">10</param>
+            </expression>
+          </item>
+        </param>
+      </expression>
+    </param>
+  </action>
+  <action type="block" enabled="true">
+    <param name="actions" type="list">
+      <item type="action">
+        <action type="set_variable" enabled="true">
+          <param name="name" type="string">alarm_hour</param>
+          <param name="value" type="expression">
+            <expression type="add">
+              <param name="expressions" type="list">
+                <item type="expression">
+                  <expression type="variable">
+                    <param name="name" type="expression">
+                      <expression type="string">
+                        <param name="value" type="string">alarm_hour</param>
+                      </expression>
+                    </param>
+                  </expression>
+                </item>
+                <item type="expression">
+                  <expression type="integer">
+                    <param name="value" type="int">1</param>
+                  </expression>
+                </item>
+              </param>
+            </expression>
+          </param>
+        </action>
+      </item>
+      <item type="action">
+        <action type="set_variable" enabled="true">
+          <param name="name" type="string">alarm_minute</param>
+          <param name="value" type="expression">
+            <expression type="subtract">
+              <param name="expressions" type="list">
+                <item type="expression">
+                  <expression type="variable">
+                    <param name="name" type="expression">
+                      <expression type="string">
+                        <param name="value" type="string">alarm_minute</param>
+                      </expression>
+                    </param>
+                  </expression>
+                </item>
+                <item type="expression">
+                  <expression type="integer">
+                    <param name="value" type="int">60</param>
+                  </expression>
+                </item>
+              </param>
+            </expression>
+          </param>
+        </action>
+      </item>
+    </param>
+    <condition type="greaterThan">
+      <param name="equals" type="boolean">true</param>
+      <param name="expression1" type="expression">
+        <expression type="variable">
+          <param name="name" type="expression">
+            <expression type="string">
+              <param name="value" type="string">alarm_minute</param>
+            </expression>
+          </param>
+        </expression>
+      </param>
+      <param name="expression2" type="expression">
+        <expression type="integer">
+          <param name="value" type="int">60</param>
+        </expression>
+      </param>
+    </condition>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">alarm_hour</param>
+    <param name="value" type="expression">
+      <expression type="subtract">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="variable">
+              <param name="name" type="expression">
+                <expression type="string">
+                  <param name="value" type="string">alarm_hour</param>
+                </expression>
+              </param>
+            </expression>
+          </item>
+          <item type="expression">
+            <expression type="integer">
+              <param name="value" type="int">24</param>
+            </expression>
+          </item>
+        </param>
+      </expression>
+    </param>
+    <condition type="greaterThan">
+      <param name="equals" type="boolean">true</param>
+      <param name="expression1" type="expression">
+        <expression type="variable">
+          <param name="name" type="expression">
+            <expression type="string">
+              <param name="value" type="string">alarm_hour</param>
+            </expression>
+          </param>
+        </expression>
+      </param>
+      <param name="expression2" type="expression">
+        <expression type="integer">
+          <param name="value" type="int">24</param>
+        </expression>
+      </param>
+    </condition>
+  </action>
+</command>
