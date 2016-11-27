@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# サーバPORPRI *から* scp
+
+scp -r koiwai@192.168.128.28:~/$1 $2
+

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command notification="false" history="false">
+  <event type="battery_charged" enabled="true">
+    <param name="percent" type="int">100</param>
+  </event>
+  <action type="notification" enabled="true">
+    <param name="id" type="int">-1</param>
+    <param name="title" type="expression">
+      <expression type="string">
+        <param name="value" type="string">Battery Warning</param>
+      </expression>
+    </param>
+    <param name="text" type="expression">
+      <expression type="concatenation">
+        <param name="expressions" type="list">
+          <item type="expression">
+            <expression type="string">
+              <param name="value" type="string"> Finish charging</param>
+            </expression>
+          </item>
+        </param>
+      </expression>
+    </param>
+    <param name="ticker" type="expression">
+      <expression type="null" />
+    </param>
+    <param name="led_color" type="int">-256</param>
+    <param name="led_on" type="int">0</param>
+    <param name="led_off" type="int">0</param>
+    <param name="use" type="strings">
+      <item>light</item>
+      <item>sound</item>
+      <item>vibrate</item>
+    </param>
+    <param name="flags" type="strings" />
+    <param name="priority" type="string">default</param>
+  </action>
+</command>

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# BibTeX用の（BIB）ファイルを用いた、LaTeXの包括的なコンパイルを行うコマンド
+# $1 対象のTEXファイル名
+
+# 一度TEXファイルのコンパイルを行い、AUXファイルを作成
+platex $1
+# AUXを元にBIBファイルをコンパイル、BBLファイルを作成
+pbibtex -kanji=utf8 $1
+# 必要なファイルが揃ったところで、再びコンパイル
+platex $1
+
+# 完成したDVIファイルをPDFファイルに変換
+dvipdfmx -o "$1.dvi"
+

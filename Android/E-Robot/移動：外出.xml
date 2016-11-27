@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="connectivity" enabled="true">
+    <param name="when" type="strings">
+      <item>disconnected</item>
+    </param>
+    <param name="type" type="strings">
+      <item>wifi</item>
+    </param>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：沈黙</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+  <action type="screen_brightness" enabled="true">
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">30</param>
+      </expression>
+    </param>
+    <condition type="is_time">
+      <param name="timestamp" type="expression">
+        <expression type="null" />
+      </param>
+      <param name="time_interval" type="time:interval" min="7:00" max="19:00" />
+    </condition>
+  </action>
+</command>

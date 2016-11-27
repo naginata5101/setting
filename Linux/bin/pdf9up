@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+
+# pdfjam を用いた、スライド用の 9up PDFファイルを作成コマンド
+# $1 入力ファイル名
+# $2 出力ファイル名
+
+pdfjam $1 -o $2 --scale 0.93 --nup 3x3 --frame true --delta "5mm 3mm"  --a4paper --landscape
+

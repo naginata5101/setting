@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 指定画像ファイルの形式を変換するコマンド
+# $1 入力ファイル
+# $2 出力ファイル（デフォルト値：'[input].pdf'）
+
+input=$1
+output=${2:-${input%.*}.pdf}
+
+pandoc ${input} -o ${output} -V documentclass=ltjarticle --latex-engine=lualatex
+

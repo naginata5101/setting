@@ -1,0 +1,25 @@
+! remove Lock = Caps_Lock
+! remove Control = Control_L
+! keysym Control_L = Caps_Lock
+! keysym Caps_Lock = Control_L
+! add Lock = Caps_Lock
+! add Control = Control_L
+
+! Ctrl_LをCapsLockに
+keycode 37 = Caps_Lock
+! CapsLockをCtrlに
+keycode 66 = Control_L NoSymbol Control_L
+remove Lock = Caps_Lock
+add Control = Control_L
+
+! 片仮名をスペースに
+keycode 98 = space NoSymbol space
+! 平仮名をスペースに
+keycode 99 = space NoSymbol space
+! 変換をスペースに
+keycode 100 = space NoSymbol space
+! 片仮名／平仮名をスペースに
+keycode 101 = space NoSymbol space
+! 無変換をスペースに
+keycode 102 = space NoSymbol space
+

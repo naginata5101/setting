@@ -1,0 +1,12 @@
+#!/bin/bash
+
+xmodmap ~/.Xmodmap &
+
+# vlc --no-playlist-autostart /media/mako/4BFB-0F01/音楽/Song/* &
+# vlc --no-playlist-autostart /media/mako/4BFB-0F01/音楽/playlist_ubuntu.xspf &
+
+skype &
+
+wally &
+
+

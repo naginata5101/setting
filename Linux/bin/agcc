@@ -1,0 +1,36 @@
+#!/bin/bash
+## カレントディレクトリ内の全Cファイルをコンパイル
+# $1 対象フォルダ（デフォルトでカレントディレクトリ）
+
+# 出力先ディレクトリを作成
+outDir=$1'agcc_out/'
+if [ ! -e ${outDir} ]
+then
+  mkdir ${outDir}
+fi
+
+# カレントディレクトリ内の（ディレクトリを除く）
+# 全てのファイルに対するループ処理
+for file in `ls -1 -F $1 | grep -v /`
+do
+  # 拡張子を除いたファイル名を取得
+  base=${file%.*}
+
+  # 対象ファイルの拡張子が"c"だった場合
+  if [ ${file##*.} = "c" -o ${file##*.} = "c*" ]
+  then
+    # gcc コマンドによるコンパイルを実行
+    echo \-\-\-COMPILING \-\-\- \"${file}\"
+    gcc -o ${outDir}${base} $1${file}
+    # コンパイルに失敗した場合
+    if [ $? -gt 0 ]
+    then
+      # "misscompile_<元ファイル名>"の空ファイルを作成
+      touch ${outDir}gcc-error_${base} 
+    fi
+  # Cファイルではない場合はその旨を出力
+  else
+    echo \<\<\<NOT C FILE\>\>\> \"${file}\"
+  fi
+done
+

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <action type="volume" enabled="true">
+    <param name="stream" type="strings">
+      <item>notification</item>
+    </param>
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">30</param>
+      </expression>
+    </param>
+  </action>
+  <action type="volume" enabled="true">
+    <param name="stream" type="strings">
+      <item>media</item>
+    </param>
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">25</param>
+      </expression>
+    </param>
+  </action>
+  <action type="volume" enabled="true">
+    <param name="stream" type="strings">
+      <item>alarm</item>
+    </param>
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">45</param>
+      </expression>
+    </param>
+  </action>
+</command>

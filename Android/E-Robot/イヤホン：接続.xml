@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="headset" enabled="true">
+    <param name="when" type="strings">
+      <item>plugged</item>
+    </param>
+    <param name="microphone" type="strings">
+      <item>yes</item>
+      <item>no</item>
+    </param>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：視聴</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+</command>

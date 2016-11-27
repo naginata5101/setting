@@ -1,0 +1,10 @@
+#!/bin/bash -eu
+# 対象ファイルと同じ場所に解凍ファイルを作成する
+
+# $1 パス付き対象ファイル名
+
+# 工事中
+
+# 編集中ファイルの拡張子を除いた名前を取得する
+file=$(basename ${GEDIT_CURRENT_DOCUMENT_NAME} .tex)
+

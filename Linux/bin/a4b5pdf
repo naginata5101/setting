@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# pdfjam を用いた、A4サイズのPDFファイルからB5サイズの抽出コマンド
+# $1 入力ファイル名
+# $2 出力ファイル名
+
+pdfjam $1 -o $2 --b5paper --scale 1.15 --offset "12.9mm -18mm"
+qpdfview --unique $2
+

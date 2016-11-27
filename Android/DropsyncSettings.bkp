@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="PREF_NOTIFY_ABOUT_CHANGES" value="false" />
+    <boolean name="PREF_SYNC_LOG_HIDE_FILE_EXCLUSIONS" value="true" />
+    <long name="PREF_DOWNLOAD_MAX_FILE_SIZE" value="9999999999" />
+    <boolean name="PREF_LOCAL_FS_MONITOR_FOREGROUND" value="false" />
+    <boolean name="PREF_AUTOSYNC_ROAMING_3G" value="false" />
+    <int name="PREF_SYNC_LOG_HINT_DISPLAYED_COUNT" value="3" />
+    <long name="PREF_AUTOSYNC_BATTERY_MIN" value="30" />
+    <boolean name="PREF_UPLOAD_SKIP_HIDDEN" value="false" />
+    <long name="PREF_SETTINGS_PASSCODE_TIMEOUT" value="15000" />
+    <string name="PREF_AUTOSYNC_NETWORKS">wifi</string>
+    <boolean name="PREF_AUTOSYNC_ENABLED" value="true" />
+    <boolean name="PREF_NOTIFY_ABOUT_SYNC_ERRORS" value="true" />
+    <int name="PREF_PREF_VERSION" value="77" />
+    <string name="PREF_SYNCED_FOLDERS">/storage/emulated/0/Documents/study
+/study
+enabled
+0
+
+/storage/emulated/0/Documents/travel
+/travel
+enabled
+22
+
+/storage/emulated/0/Documents/setting
+/setting/Android
+enabled
+12
+
+    </string>
+    <int name="PREF_INSTALLED_VERSION_CODE" value="5122801" />
+    <boolean name="PREF_AUTOSYNC_INSTANT_UPLOAD_ENABLED" value="true" />
+    <boolean name="PREF_FIRST_TIME" value="false" />
+    <long name="PREF_UPLOAD_MAX_FILE_SIZE" value="9999999999" />
+    <string name="acra.user.email">naginata5101@gmail.com</string>
+    <string name="PREF_LANGUAGE">en</string>
+    <string name="PREF_EXCLUDE_PATTERNS">**/.thumbnails
+**/*~
+**/Thumbs.db
+**/.nomedia
+**/.git/*
+**/*.xbb
+**/*.aux
+**/*.dvi
+**/*.synctex.gz
+**/*.log
+    </string>
+    <long name="PREF_AUTOSYNC_INTERVAL" value="3600000" />
+    <string name="PREF_UI_THEME">dark</string>
+    <long name="PREF_SYNC_LOG_MAX_AGE" value="259200000" />
+    <long name="PREF_AUTOSYNC_RETRY_INTERVAL" value="300000" />
+    <boolean name="PREF_NOTIFY_PROGRESS" value="true" />
+    <int name="acra.lastVersionNr" value="5122801" />
+    <boolean name="PREF_PROTECT_SETTINGS" value="false" />
+    <long name="PREF_LAST_DELTA_CHECK" value="1451873773827" />
+    <boolean name="PREF_SMART_CHANGE_DETECTION" value="true" />
+    <boolean name="PREF_MANUAL_SYNC_WARN_3G" value="false" />
+    <string name="PREF_AUTOSYNC_POWER_SOURCES">any</string>
+</map>

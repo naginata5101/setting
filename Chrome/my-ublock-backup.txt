@@ -1,0 +1,119 @@
+{
+  "timeStamp": 1444908065059,
+  "version": "1.2.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "autoUpdate": true,
+    "collapseBlocked": true,
+    "colorBlindFriendly": true,
+    "contextMenuEnabled": false,
+    "dynamicFilteringEnabled": false,
+    "experimentalEnabled": false,
+    "externalLists": "http://tofukko.r.ribbon.to/Adblock_Plus_list.txt",
+    "firewallPaneMinimized": true,
+    "hyperlinkAuditingDisabled": false,
+    "parseAllABPHideFilters": true,
+    "prefetchingDisabled": false,
+    "requestLogMaxEntries": 1000,
+    "showIconBadge": false,
+    "cloudStorageEnabled": true,
+    "webrtcIPAddressHidden": false
+  },
+  "filterLists": {
+    "assets/user/filters.txt": {
+      "group": "default",
+      "off": false,
+      "entryCount": 1,
+      "entryUsedCount": 1
+    },
+    "assets/ublock/privacy.txt": {
+      "title": "uBlock filters – Privacy",
+      "group": "default",
+      "off": true,
+      "entryCount": 4,
+      "entryUsedCount": 4
+    },
+    "assets/ublock/unbreak.txt": {
+      "title": "uBlock filters – Unbreak",
+      "group": "default",
+      "off": true,
+      "entryCount": 61,
+      "entryUsedCount": 61
+    },
+    "assets/ublock/badware.txt": {
+      "title": "uBlock filters – Badware risks",
+      "group": "default",
+      "supportURL": "https://github.com/gorhill/uBlock/wiki/Badware-risks",
+      "instructionURL": "https://github.com/gorhill/uBlock/wiki/Badware-risks",
+      "off": true,
+      "entryCount": 4,
+      "entryUsedCount": 4,
+      "supportName": "github.com"
+    },
+    "http://tofukko.r.ribbon.to/Adblock_Plus_list.txt": {
+      "title": "豆腐フィルタ",
+      "group": "custom",
+      "external": true,
+      "off": false,
+      "entryCount": 1906,
+      "entryUsedCount": 1901
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easylist.txt": {
+      "title": "EasyList",
+      "group": "ads",
+      "homeURL": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "supportURL": "https://forums.lanik.us/",
+      "off": true,
+      "entryCount": 66573,
+      "entryUsedCount": 66542
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easyprivacy.txt": {
+      "title": "EasyPrivacy",
+      "group": "privacy",
+      "homeURL": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+      "supportURL": "https://forums.lanik.us/",
+      "off": true,
+      "entryCount": 10913,
+      "entryUsedCount": 10876
+    },
+    "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
+      "title": "Malware domains",
+      "group": "malware",
+      "homeURL": "http://malwaredomains.lehigh.edu/files/justdomains",
+      "supportURL": "http://www.malwaredomains.com/",
+      "off": true,
+      "entryCount": 9448,
+      "entryUsedCount": 9381
+    },
+    "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
+      "title": "Peter Lowe’s Ad server list",
+      "group": "ads",
+      "homeURL": "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+      "supportURL": "http://pgl.yoyo.org/adservers/",
+      "off": true,
+      "entryCount": 2433,
+      "entryUsedCount": 2433
+    },
+    "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
+      "title": "Malware Domain List",
+      "group": "malware",
+      "homeURL": "http://www.malwaredomainlist.com/hostslist/hosts.txt",
+      "off": true,
+      "entryCount": 1488,
+      "entryUsedCount": 1488
+    },
+    "https://easylist-downloads.adblockplus.org/fanboy-social.txt": {
+      "off": false,
+      "title": "Fanboy’s Social Blocking List",
+      "group": "social",
+      "supportURL": "https://forums.lanik.us/",
+      "entryCount": 12854,
+      "entryUsedCount": 12854
+    }
+  },
+  "netWhitelist": "500px.com\nabout-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\ndropbox.com\nevernote.com\ngetpocket.com\ngoogle.co.jp\ngoogle.com\nifttt.com\nonedrive.live.com\ntweetdeck.twitter.com\nuec.ac.jp",
+  "dynamicFilteringString": "",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "",
+  "userFilters": "! プロモーションのトレンド＠Twitter\ntwitter.com###page-container > .AppContainer > .u-cf.content-main.AppContent-main > .Grid--withGutter.Grid > .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell > .ProfileSidebar--withLeftAlignment.ProfileSidebar > .MoveableModule > .SidebarCommonModules > .trends.module.Trends > .trends-inner > .trends-container.flex-module > .flex-module-inner > .js-trends.trend-items > .promoted-trend.js-trend-item.trend-item\n"
+}

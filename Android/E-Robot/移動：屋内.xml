@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="network_state" enabled="false">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+  </event>
+  <event type="connectivity" enabled="true">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="type" type="strings">
+      <item>wifi</item>
+    </param>
+  </event>
+  <action type="screen_brightness" enabled="true">
+    <param name="percent" type="expression">
+      <expression type="integer">
+        <param name="value" type="int">10</param>
+      </expression>
+    </param>
+  </action>
+</command>

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# 指定画像ファイルの形式を変換するコマンド
+# $1 対象ファイル（ワイルドカード使用可，クオーテーションで括ること）（デフォルト値：'*.eps'）
+# $2 変換拡張子（デフォルト値：'png'）
+
+ target=${1:-'*.eps'}
+ extension=${2:-'png'}
+# echo $target
+
+  for fname in ${target}
+  do
+    echo ${fname}
+    convert ${fname} ${fname%.*}.${extension}
+  done
+

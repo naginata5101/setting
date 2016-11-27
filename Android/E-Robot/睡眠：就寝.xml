@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="screen_brightness" enabled="true">
+    <condition type="lessThan">
+      <param name="equals" type="boolean">true</param>
+      <param name="expression1" type="expression">
+        <expression type="screen_brightness" />
+      </param>
+      <param name="expression2" type="expression">
+        <expression type="integer">
+          <param name="value" type="int">0</param>
+        </expression>
+      </param>
+    </condition>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：鎮静</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+  <action type="set_variable" enabled="true">
+    <param name="name" type="string">inBed</param>
+    <param name="value" type="expression">
+      <expression type="boolean">
+        <param name="value" type="boolean">true</param>
+      </expression>
+    </param>
+  </action>
+</command>

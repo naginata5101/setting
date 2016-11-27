@@ -1,0 +1,16 @@
+#!/bin/bash
+## カレントディレクトリ内の全Cファイルをコンパイル
+# $1 対象ファイル
+# $2 出力フォルダ（デフォルトで "img" ディレクトリ）
+
+# 出力先ディレクトリを作成
+outDir=$2
+if [ ! -e $2 ]
+then
+  mkdir ${outDir}
+fi
+
+cd ${outDir}
+pdfimages -png ../$1 img
+cd ../
+

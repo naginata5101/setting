@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="notification_created" enabled="true">
+    <param name="package" type="string">com.sega.PhantasyStarOnline2es</param>
+    <param name="ticker" type="string"></param>
+    <param name="hasTicker" type="boolean">false</param>
+  </event>
+  <action type="play_default_sound" enabled="true">
+    <param name="type" type="string">2</param>
+  </action>
+  <action type="vibrate" enabled="true">
+    <param name="pattern" type="string">450</param>
+  </action>
+</command>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<command>
+  <event type="network_state" enabled="true">
+    <param name="when" type="strings">
+      <item>connected</item>
+    </param>
+    <param name="ssid" type="string">Buffalo_WHR-G54S</param>
+  </event>
+  <action type="execute_robot_command" enabled="true">
+    <param name="command" type="string">モード：通常</param>
+    <param name="confirmation" type="boolean">false</param>
+    <param name="enableExecuteItself" type="boolean">false</param>
+    <param name="wait_for_finish" type="boolean">false</param>
+  </action>
+</command>

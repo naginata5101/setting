@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 指定拡張子を一掃するコマンド
+# $1 対象ディレクトリ
+# $2 対象拡張子
+
+	rm -fv $1/*.$2
+	
+	for dirlist in `ls -l $1 | awk '$1 ~ /d/ {print $9 }' `
+	do
+		#echo $dirlist
+		exrm "$1/$dirlist" $2
+	done
+

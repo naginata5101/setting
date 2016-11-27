@@ -1,0 +1,128 @@
+{
+  "name": "Chrome Gestures",
+  "version": "1.13.4",
+  "normal_actions": {
+    "#FlipBack": {
+      "name": "back",
+      "args": []
+    },
+    "#FlipForward": {
+      "name": "forward",
+      "args": []
+    },
+    "UD": {
+      "name": "close this tab",
+      "args": []
+    },
+    "U": {
+      "name": "open new tab",
+      "args": []
+    },
+    "UDRL": {
+      "name": "close this window",
+      "args": []
+    },
+    "UDR": {
+      "name": "close right tabs",
+      "args": []
+    },
+    "UR": {
+      "name": "select last tab",
+      "args": []
+    },
+    "UL": {
+      "name": "select first tab",
+      "args": []
+    },
+    "UDLR": {
+      "name": "close this window",
+      "args": []
+    },
+    "UDL": {
+      "name": "close left tabs",
+      "args": []
+    },
+    "RL": {
+      "name": "stop",
+      "args": []
+    },
+    "R": {
+      "name": "forward",
+      "args": []
+    },
+    "L": {
+      "name": "back",
+      "args": []
+    },
+    "DUDU": {
+      "name": "cacheless reload",
+      "args": []
+    },
+    "DU": {
+      "name": "reload",
+      "args": []
+    },
+    "DR": {
+      "name": "select right tab",
+      "args": []
+    },
+    "DL": {
+      "name": "select left tab",
+      "args": []
+    },
+    "LR": {
+      "name": "stop",
+      "args": []
+    },
+    "D": {
+      "name": "re-open closed tab",
+      "args": []
+    }
+  },
+  "linkdrag_actions": {
+    "D": {
+      "name": "open in new tab",
+      "args": []
+    },
+    "DU": {
+      "name": "open in background tab",
+      "args": []
+    },
+    "U": {
+      "name": "copy url",
+      "args": []
+    },
+    "UD": {
+      "name": "copy url and text",
+      "args": []
+    }
+  },
+  "textdrag_actions": {
+    "DR": {
+      "name": "search with #1 in new tab",
+      "args": [
+        "http://www.google.com/search?q=%s",
+        "Google"
+      ]
+    },
+    "UL": {
+      "name": "copy text",
+      "args": []
+    },
+    "UR": {
+      "name": "copy html",
+      "args": []
+    }
+  },
+  "mouse_track": true,
+  "visualized_arrow": true,
+  "superdrag": false,
+  "useMousewheel": false,
+  "useTabList": false,
+  "useSmoothScroll": false,
+  "ScrollSpeedValue": 0.2,
+  "useScrollAcceleration": false,
+  "AccelerationValue": 5,
+  "suppress_contextmenu": true,
+  "minimumUnit": 15
+}
