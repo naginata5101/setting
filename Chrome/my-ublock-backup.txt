@@ -1,53 +1,54 @@
 {
-  "timeStamp": 1444908065059,
-  "version": "1.2.0",
+  "timeStamp": 1480416518029,
+  "version": "1.9.16",
   "userSettings": {
     "advancedUserEnabled": true,
+    "alwaysDetachLogger": false,
     "autoUpdate": true,
+    "cloudStorageEnabled": true,
     "collapseBlocked": true,
-    "colorBlindFriendly": true,
+    "colorBlindFriendly": false,
     "contextMenuEnabled": false,
-    "dynamicFilteringEnabled": false,
-    "experimentalEnabled": false,
-    "externalLists": "http://tofukko.r.ribbon.to/Adblock_Plus_list.txt",
+    "dynamicFilteringEnabled": true,
+    "externalLists": "http://tofukko.r.ribbon.to/Adblock_Plus_list.txt\nhttps://dl.dropboxusercontent.com/u/135420/ginzakill-without-element-hiding.txt",
     "firewallPaneMinimized": true,
     "hyperlinkAuditingDisabled": false,
+    "ignoreGenericCosmeticFilters": false,
+    "largeMediaSize": 50,
     "parseAllABPHideFilters": true,
     "prefetchingDisabled": false,
     "requestLogMaxEntries": 1000,
     "showIconBadge": false,
-    "cloudStorageEnabled": true,
+    "tooltipsDisabled": false,
     "webrtcIPAddressHidden": false
   },
   "filterLists": {
     "assets/user/filters.txt": {
       "group": "default",
       "off": false,
-      "entryCount": 1,
-      "entryUsedCount": 1
+      "entryCount": 2,
+      "entryUsedCount": 2
     },
     "assets/ublock/privacy.txt": {
       "title": "uBlock filters – Privacy",
       "group": "default",
       "off": true,
-      "entryCount": 4,
-      "entryUsedCount": 4
+      "entryCount": 50,
+      "entryUsedCount": 50
     },
     "assets/ublock/unbreak.txt": {
       "title": "uBlock filters – Unbreak",
       "group": "default",
       "off": true,
-      "entryCount": 61,
-      "entryUsedCount": 61
+      "entryCount": 114,
+      "entryUsedCount": 114
     },
-    "assets/ublock/badware.txt": {
-      "title": "uBlock filters – Badware risks",
+    "assets/ublock/experimental.txt": {
+      "title": "uBlock filters – Experimental",
       "group": "default",
-      "supportURL": "https://github.com/gorhill/uBlock/wiki/Badware-risks",
-      "instructionURL": "https://github.com/gorhill/uBlock/wiki/Badware-risks",
       "off": true,
-      "entryCount": 4,
-      "entryUsedCount": 4,
+      "supportURL": "https://github.com/gorhill/uBlock/wiki/Experimental-filters",
+      "instructionURL": "https://github.com/gorhill/uBlock/wiki/Experimental-filters",
       "supportName": "github.com"
     },
     "http://tofukko.r.ribbon.to/Adblock_Plus_list.txt": {
@@ -55,65 +56,73 @@
       "group": "custom",
       "external": true,
       "off": false,
-      "entryCount": 1906,
-      "entryUsedCount": 1901
+      "entryCount": 1949,
+      "entryUsedCount": 1943
+    },
+    "https://dl.dropboxusercontent.com/u/135420/ginzakill-without-element-hiding.txt": {
+      "title": "GINZA死すべし (非表示フィルタ抜き)",
+      "group": "custom",
+      "external": true,
+      "off": false,
+      "entryCount": 14,
+      "entryUsedCount": 13
     },
     "assets/thirdparties/easylist-downloads.adblockplus.org/easylist.txt": {
       "title": "EasyList",
       "group": "ads",
-      "homeURL": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "homeURL": "https://easylist.to/easylist/easylist.txt",
       "supportURL": "https://forums.lanik.us/",
       "off": true,
-      "entryCount": 66573,
-      "entryUsedCount": 66542
+      "entryCount": 66729,
+      "entryUsedCount": 66259
     },
     "assets/thirdparties/easylist-downloads.adblockplus.org/easyprivacy.txt": {
       "title": "EasyPrivacy",
       "group": "privacy",
-      "homeURL": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+      "homeURL": "https://easylist.to/easylist/easyprivacy.txt",
       "supportURL": "https://forums.lanik.us/",
       "off": true,
-      "entryCount": 10913,
-      "entryUsedCount": 10876
-    },
-    "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
-      "title": "Malware domains",
-      "group": "malware",
-      "homeURL": "http://malwaredomains.lehigh.edu/files/justdomains",
-      "supportURL": "http://www.malwaredomains.com/",
-      "off": true,
-      "entryCount": 9448,
-      "entryUsedCount": 9381
-    },
-    "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
-      "title": "Peter Lowe’s Ad server list",
-      "group": "ads",
-      "homeURL": "http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
-      "supportURL": "http://pgl.yoyo.org/adservers/",
-      "off": true,
-      "entryCount": 2433,
-      "entryUsedCount": 2433
-    },
-    "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
-      "title": "Malware Domain List",
-      "group": "malware",
-      "homeURL": "http://www.malwaredomainlist.com/hostslist/hosts.txt",
-      "off": true,
-      "entryCount": 1488,
-      "entryUsedCount": 1488
+      "entryCount": 11904,
+      "entryUsedCount": 11867
     },
     "https://easylist-downloads.adblockplus.org/fanboy-social.txt": {
       "off": false,
       "title": "Fanboy’s Social Blocking List",
       "group": "social",
       "supportURL": "https://forums.lanik.us/",
-      "entryCount": 12854,
-      "entryUsedCount": 12854
+      "entryCount": 14672,
+      "entryUsedCount": 14672
+    },
+    "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
+      "title": "Malware domains",
+      "group": "malware",
+      "homeURL": "https://mirror.cedia.org.ec/malwaredomains/justdomains",
+      "supportURL": "http://www.malwaredomains.com/",
+      "off": true,
+      "entryCount": 23103,
+      "entryUsedCount": 23031
+    },
+    "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
+      "title": "Peter Lowe’s Ad and tracking server list",
+      "group": "multipurpose",
+      "homeURL": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+      "supportURL": "https://pgl.yoyo.org/adservers/",
+      "off": true,
+      "entryCount": 2371,
+      "entryUsedCount": 2371
+    },
+    "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
+      "title": "Malware Domain List",
+      "group": "malware",
+      "homeURL": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+      "off": true,
+      "entryCount": 1226,
+      "entryUsedCount": 1226
     }
   },
-  "netWhitelist": "500px.com\nabout-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\ndropbox.com\nevernote.com\ngetpocket.com\ngoogle.co.jp\ngoogle.com\nifttt.com\nonedrive.live.com\ntweetdeck.twitter.com\nuec.ac.jp",
-  "dynamicFilteringString": "",
+  "netWhitelist": "500px.com\nabout-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\ndropbox.com\nevernote.com\ngetpocket.com\ngoogle.co.jp\ngoogle.com\nifttt.com\nmail.ezweb.ne.jp\nonedrive.live.com\ntweetdeck.twitter.com\nuec.ac.jp\nwww.nytimes.com",
+  "dynamicFilteringString": "buhidoh.net * 3p block\ndechamore.net * 1p-script block\ndic.nicovideo.jp * inline-script block\ndic.nicovideo.jp * 3p noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "",
-  "userFilters": "! プロモーションのトレンド＠Twitter\ntwitter.com###page-container > .AppContainer > .u-cf.content-main.AppContent-main > .Grid--withGutter.Grid > .u-lg-size1of4.u-size1of3.Grid-cell > .Grid--withGutter.Grid > .Grid-cell > .ProfileSidebar--withLeftAlignment.ProfileSidebar > .MoveableModule > .SidebarCommonModules > .trends.module.Trends > .trends-inner > .trends-container.flex-module > .flex-module-inner > .js-trends.trend-items > .promoted-trend.js-trend-item.trend-item\n"
+  "userFilters": "! niconico トップページの右サイドコンテンツ\nwww.nicovideo.jp###sideContents\n\n! niconico 動画上のニコ割スペース\nwww.nicovideo.jp###textMarquee\n"
 }
